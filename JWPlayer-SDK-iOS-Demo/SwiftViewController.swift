@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SwiftViewController: UIViewController {
     @IBOutlet weak var playerContainerView: UIView!
@@ -14,7 +15,23 @@ class SwiftViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let config: JWConfig  = JWConfig(contentURL: "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4")
+        let config: JWConfig//  = JWConfig(contentURL: "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4")
+        = JWConfig(contentURL: "http://localhost:9000/stream.m3u8")
+//        config.assetOptions = ["AVURLAssetHTTPHeaderFieldsKey": ["cookie": "cookie data"]]
+        
+        let cookie = HTTPCookie(properties: [
+            HTTPCookiePropertyKey.name: "foo",
+            HTTPCookiePropertyKey.value: "bar",
+            HTTPCookiePropertyKey.domain: "127.0.0.1",
+            HTTPCookiePropertyKey.path: "/",
+        ])!
+        
+        config.assetOptions = [
+            "AVURLAssetHTTPHeaderFieldsKey": ["foo": "cookie data"],
+            AVURLAssetHTTPCookiesKey: [cookie],
+        ]
+        
+        
         player = JWPlayerController(config: config)
     }
 
@@ -22,7 +39,7 @@ class SwiftViewController: UIViewController {
         super.viewDidAppear(animated)
         if let playerView = player?.view {
             playerContainerView.addSubview(playerView)
-            playerView.constrainToSuperview()            
+            playerView.constrainToSuperview()
         }
     }
 }

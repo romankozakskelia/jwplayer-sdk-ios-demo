@@ -23,7 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    JWConfig *config = [JWConfig configWithContentURL:@"http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4"];
+//    JWConfig *config = [JWConfig configWithContentURL:@"http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4"];
+    JWConfig *config = [JWConfig configWithContentURL:@"http://localhost:9000/stream.m3u8"];
+    
+    
+    config.assetOptions = @{@"AVURLAssetHTTPHeaderFieldsKey":@{@"cookie": @"cookie data"}};
     self.player = [[JWPlayerController alloc]initWithConfig:config];
 }
 

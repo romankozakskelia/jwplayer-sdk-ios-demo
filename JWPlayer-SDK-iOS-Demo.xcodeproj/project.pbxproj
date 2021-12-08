@@ -162,7 +162,7 @@
 				TargetAttributes = {
 					6A7D08ED1A5DAFD600C4E749 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 8VC65F749H;
+						DevelopmentTeam = 3MNFP5U458;
 						LastSwiftMigration = 1010;
 					};
 				};
@@ -395,7 +395,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8VC65F749H;
+				DEVELOPMENT_TEAM = 3MNFP5U458;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,7 +411,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romankozak.JWPlayer-SDK-iOS-Demo";
 				PRODUCT_NAME = "JWPlayer-SDK-iOS-Demo";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-SDK-iOS-Demo/JWPlayer-SDK-iOS-Demo-Bridging-Header.h";
@@ -429,7 +429,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8VC65F749H;
+				DEVELOPMENT_TEAM = 3MNFP5U458;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -445,7 +445,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romankozak.JWPlayer-SDK-iOS-Demo";
 				PRODUCT_NAME = "JWPlayer-SDK-iOS-Demo";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-SDK-iOS-Demo/JWPlayer-SDK-iOS-Demo-Bridging-Header.h";
